@@ -4,7 +4,7 @@
 extern zend_module_entry protobuf_module_entry;
 #define phpext_proto_ptr &protobuf_module_entry
 
-define PHP_PROTOBUF_VERSION "0.1.0"                                                                                             
+#define PHP_PROTOBUF_VERSION "0.1.0"                                                                                             
 
 #ifdef PHP_WIN32
 #   define PHP_PROTOBUF_API __declspec(dllexport)
