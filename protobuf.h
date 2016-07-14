@@ -1,5 +1,5 @@
-#ifndef PROTOBUF_PHP_PROTOBUF_H
-#define PROTOBUF_PHP_PROTOBUF_H
+#ifndef PHP_PROTOBUF_H
+#define PHP_PROTOBUF_H
 
 #include <stdint.h>
 
@@ -25,4 +25,4 @@ typedef union
 	uint64_t u_val;
 } fixed64_t;
 
-#endif /* PROTOBUF_PHP_PROTOBUF_H */
+#endif /* PHP_PROTOBUF_H */
