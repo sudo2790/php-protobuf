@@ -4,8 +4,8 @@
 
 #include "php_protobuf.h"
 #include "protobuf.h"
-#include "reader.h"
-#include "writer.h"
+// #include "reader.h"
+// #include "writer.h"
 
 // #ifndef Z_ADDREF
 // #define Z_ADDREF(z) ZVAL_ADDREF(&(z))
