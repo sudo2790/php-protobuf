@@ -578,7 +578,7 @@ zend_function_entry pb_methods[] = {
 	// PHP_ME(ProtobufMessage, parseFromString, arginfo_parseFromString, ZEND_ACC_PUBLIC)
 	// PHP_ME(ProtobufMessage, serializeToString, arginfo_serializeToString, ZEND_ACC_PUBLIC)
 	// PHP_ME(ProtobufMessage, set, arginfo_set, ZEND_ACC_PUBLIC)
-	{NULL, NULL, NULL, 0, 0}
+	{NULL, NULL, NULL}
 };
 
 PHP_MINIT_FUNCTION(protobuf)
@@ -609,7 +609,7 @@ PHP_MSHUTDOWN_FUNCTION(protobuf)
 
 PHP_RINIT_FUNCTION(protobuf)
 {
-#if defined(COMPILE_DL_PROTO) && defined(ZTS)
+#if defined(COMPILE_DL_PROTOBUF) && defined(ZTS)
     ZEND_TSRMLS_CACHE_UPDATE();
 #endif
     return SUCCESS;
@@ -623,7 +623,7 @@ PHP_RSHUTDOWN_FUNCTION(protobuf)
 PHP_MINFO_FUNCTION(protobuf)
 {
     php_info_print_table_start();
-    php_info_print_table_header(2, "proto support", "enabled");
+    php_info_print_table_header(2, "protobuf support", "enabled");
     php_info_print_table_end();
 }
 
@@ -636,15 +636,15 @@ zend_module_entry proto_module_entry = {
     PHP_RINIT(protobuf),       /* Replace with NULL if there's nothing to do at request start */
     PHP_RSHUTDOWN(protobuf),   /* Replace with NULL if there's nothing to do at request end */
     PHP_MINFO(protobuf),
-    PHP_PROTO_VERSION,
+    PHP_PROTOBUF_VERSION,
     STANDARD_MODULE_PROPERTIES
 };
 
-#ifdef COMPILE_DL_PROTO
+#ifdef COMPILE_DL_PROTOBUF
 #ifdef ZTS
 ZEND_TSRMLS_CACHE_DEFINE()
 #endif
-ZEND_GET_MODULE(proto)
+ZEND_GET_MODULE(protobuf)
 #endif
 
 // static int pb_assign_value(zval *this, zval *dst, zval *src, uint32_t field_number)
