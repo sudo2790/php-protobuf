@@ -38,7 +38,7 @@
 // #define PB_FIELD_NAME "name"
 // #define PB_FIELD_REQUIRED "required"
 // #define PB_FIELD_TYPE "type"
-// #define PB_VALUES_PROPERTY "values"
+#define PB_VALUES_PROPERTY "values"
 
 #define PB_METHOD(func) PHP_METHOD(ProtobufMessage, func)
 
