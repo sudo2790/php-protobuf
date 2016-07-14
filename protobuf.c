@@ -78,7 +78,7 @@ PB_METHOD(__construct)
 	zval values;
 	array_init(&values);
 
-	add_property_zval(getThis(), PB_VALUES_PROPERTY, values);
+	add_property_zval(getThis(), PB_VALUES_PROPERTY, &values);
 
 	php_printf("this is protobuf for php7 \n");
 }

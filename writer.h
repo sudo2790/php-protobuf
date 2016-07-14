@@ -1,5 +1,5 @@
-#ifndef PROTOBUF_PHP_WRITER_H
-#define PROTOBUF_PHP_WRITER_H
+#ifndef PHP_PROTOBUF_H
+#define PHP_PROTOBUF_H
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -24,4 +24,4 @@ int writer_write_string(writer_t *writer, uint32_t field_number, const char *str
 
 #define writer_write_message(writer, field_number, str, len) writer_write_string((writer), (field_number), (str), (len))
 
-#endif /* PROTOBUF_PHP_WRITER_H */
+#endif /* PHP_PROTOBUF_H */

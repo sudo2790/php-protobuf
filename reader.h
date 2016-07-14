@@ -1,5 +1,5 @@
-#ifndef PROTOBUF_PHP_READER_H
-#define PROTOBUF_PHP_READER_H
+#ifndef PHP_PROTOBUF_H
+#define PHP_PROTOBUF_H
 
 #include <stdint.h>
 #include <sys/types.h>
@@ -26,4 +26,4 @@ int reader_skip_64bit(reader_t *reader);
 int reader_skip_length_delimited(reader_t *reader);
 int reader_skip_varint(reader_t *reader);
 
-#endif /* PROTOBUF_PHP_READER_H */
+#endif /* PHP_PROTOBUF_H */
