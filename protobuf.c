@@ -75,7 +75,6 @@ PHP_METHOD(ProtobufMessage, __construct)
 {
 	zval *values;
 
-	ALLOC_INIT_ZVAL(values);
 	array_init(values);
 
 	add_property_zval(getThis(), PB_VALUES_PROPERTY, values);
