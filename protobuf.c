@@ -73,12 +73,14 @@ zend_class_entry *pb_entry;
 // static ulong PB_FIELD_TYPE_HASH;
 // static ulong PB_VALUES_PROPERTY_HASH;
 
-PHP_METHOD(__construct)
+PB_METHOD(__construct)
 {
 	zval values;
 	array_init(&values);
 
 	add_property_zval(getThis(), PB_VALUES_PROPERTY, values);
+
+	php_printf("this is protobuf for php7 \n");
 }
 
 // PHP_METHOD(ProtobufMessage, append)
@@ -618,7 +620,7 @@ PHP_RSHUTDOWN_FUNCTION(protobuf)
     return SUCCESS;
 }
 
-PHP_MINFO_FUNCTION(proto)
+PHP_MINFO_FUNCTION(protobuf)
 {
     php_info_print_table_start();
     php_info_print_table_header(2, "proto support", "enabled");
